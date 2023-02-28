@@ -1,6 +1,6 @@
 <style src="./annotationLayer.css"></style>
 <script>
-
+	import PdfjsWorker from 'pdfjs-dist/es5/build/pdf.worker.js'
 	import componentFactory from './componentFactory.js'
 
 	if ( process.env.VUE_ENV !== 'server' ) {
@@ -10,7 +10,7 @@
 
 		if ( typeof window !== 'undefined' && 'Worker' in window && navigator.appVersion.indexOf('MSIE 10') === -1 ) {
 
-			var PdfjsWorker = require('worker-loader!pdfjs-dist/es5/build/pdf.worker.js');
+			// var PdfjsWorker = require('worker-loader!pdfjs-dist/es5/build/pdf.worker.js');
 			PDFJS.GlobalWorkerOptions.workerPort = new PdfjsWorker();
 		}
 
