@@ -1,6 +1,8 @@
 /* see https://github.com/mozilla/pdf.js/blob/55a853b6678cf3d05681ffbb521e5228e607b5d2/test/annotation_layer_test.css */
 
 .annotationLayer {
+	width: 100vw !important;
+	height: 100vh !important;
 	position: absolute;
 	left: 0;
 	top: 0;
